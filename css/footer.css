@@ -5,7 +5,7 @@
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 }
 
 .footer-info {
@@ -37,7 +37,7 @@
 }
 
 .footer-social {
-  margin-right: 80px;
+  margin-right: 83px; /* Виправлено з 80px на 83px */
 }
 
 .footer-social-title {
@@ -95,12 +95,19 @@
   border: 1px solid #ffffff;
   background-color: transparent;
   font-size: 12px;
-  line-height: 1.5;
+  font-weight: 400; /* Додано явно */
+  line-height: 1.17; /* Виправлено з 1.5 на 1.17 */
   letter-spacing: 0.04em;
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #ffffff;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Додано transition */
+}
+
+.footer-form-input:focus {
+  border-color: #31d0aa; /* Виправлено стан фокусу */
 }
 
 .footer-form-input::placeholder {
@@ -128,7 +135,7 @@
 
 .footer-form-btn:hover,
 .footer-form-btn:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa; /* Виправлено колір ховеру кнопки підписки на #31d0aa */
 }
 
 .footer-btn-icon {
